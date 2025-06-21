@@ -1,0 +1,1 @@
+web: streamlit run UI.py --server.port $PORT --server.enableCORS false
