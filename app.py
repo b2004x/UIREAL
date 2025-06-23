@@ -34,19 +34,19 @@ if st.button("Tiếp tục"):
     result_dir = Path(f"./results/{folder_name}")
     if not result_dir.exists():
         st.error("❌ Không tìm thấy kết quả đã lưu!")
-    # else:
+    else:
 
-        # # ===== Biểu đồ 2: Dự báo 7 ngày tới =====
-        # st.subheader("🔮 Dự báo 7 ngày tới")
-        # st.image(Image.open(result_dir / "forecast_plot.png"))
+        # ===== Biểu đồ 2: Dự báo 7 ngày tới =====
+        st.subheader("🔮 Dự báo 7 ngày tới")
+        st.image(Image.open(result_dir / "forecast_plot.png"))
 
     
-        # true_vals = np.load(result_dir / "true_last_30.npy")
-        # forecast_vals = np.load(result_dir / "forecast_next_7.npy")
+        true_vals = np.load(result_dir / "true_last_30.npy")
+        forecast_vals = np.load(result_dir / "forecast_next_7.npy")
 
-        # st.markdown("### ✅ Giá trị thực tế (30 ngày gần nhất):")
-        # st.write(np.round(true_vals, 2))
+        st.markdown("### ✅ Giá trị thực tế (30 ngày gần nhất):")
+        st.write(np.round(true_vals, 2))
 
-        # st.markdown("### 🔮 Dự đoán doanh số 7 ngày tới:")
-        # for i, val in enumerate(forecast_vals, 1):
-        #     st.write(f"Ngày +{i}: **{val:.2f}**")
+        st.markdown("### 🔮 Dự đoán doanh số 7 ngày tới:")
+        for i, val in enumerate(forecast_vals, 1):
+            st.write(f"Ngày +{i}: **{val:.2f}**")
