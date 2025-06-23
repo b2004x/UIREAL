@@ -34,7 +34,7 @@ if st.button("Tiếp tục"):
     result_dir = Path(f"./results/{folder_name}")
     if not result_dir.exists():
         st.error("❌ Không tìm thấy kết quả đã lưu!")
-    else:
+    # else:
 
         # # ===== Biểu đồ 2: Dự báo 7 ngày tới =====
         # st.subheader("🔮 Dự báo 7 ngày tới")
